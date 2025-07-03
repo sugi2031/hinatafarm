@@ -172,137 +172,7 @@ section:target::before {
   border-radius: 8px;
 }
 
-/* --- たまごページ --- */
-.image-row {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-}
-.image-row img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.tamago-text {
-  text-align: center;
-  margin-top: 32px;
-}
-.tamago-text p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 24px;
-  color: #303030;
-}
-
-/* --- お知らせなど --- */
-.news {
-  text-align: center;
-  padding: 48px 16px;
-}
-.news-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  text-align: left;
-}
-
-.about-single {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 48px 16px;
-}
-.about-single h3 {
-  font-size: 24px;
-  margin-bottom: 16px;
-  color: #303030;
-}
-.about-single p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #303030;
-}
-
-.tamago-image-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  margin-bottom: 32px;
-}
-
-.tamago-image-row img {
-  width: 300px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.tamago-text {
-  text-align: center;
-  margin-top: 32px;
-}
-
-.tamago-text p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 24px;
-  color: #303030;
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #B48736;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #9C7B54;
-}
-
-.shop-info {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.map-wrapper {
-  width: 66.66%;  /* 画面の3分の2 */
-  margin: 0 auto; /* 中央寄せ */
-  padding: 16px 0;
-}
-
-.shop-info a {
-  color: #303030; /* 黒色に設定 */
-  text-decoration: none; /* 下線を消したい場合は追加 */
-}
-
-.shop-info a:hover {
-  text-decoration: underline; /* ホバー時だけ下線つけたいなら */
-  color: #B48736; /* またはゴールドなどお好みで */
-}
-
-.edamame-text {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 32px 16px;
-  text-align: center; /* ← これで段落も中央寄せ */
-}
-
-/* --- 黒枝豆ページのレイアウト全体 --- */
+/* --- 黒枝豆ページのレイアウト --- */
 .edamame-text {
   max-width: 800px;
   margin: 0 auto;
@@ -310,7 +180,6 @@ section:target::before {
   text-align: center;
 }
 
-/* --- ボタンスタイル --- */
 .edamame-text a.btn-primary {
   display: inline-block;
   margin-top: 24px;
@@ -326,39 +195,73 @@ section:target::before {
   background-color: #9C7B54;
 }
 
-/* --- 画像3枚横並び --- */
-.image-row {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-}
-.image-row img {
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* --- フッターの戻るリンク --- */
-footer {
-  text-align: center;
-  padding: 32px;
-  background: #f8f8f8;
-}
-footer a {
-  color: #9C7B54;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* === スマホ対応（レスポンシブ） === */
+/* --- レスポンシブ対応 --- */
 @media screen and (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .hero-text {
+    top: 60%;
+    width: 90%;
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .product-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .sns-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-primary {
+    display: block;
+    width: fit-content;
+    margin: 16px auto;
+    text-align: center;
+  }
+
+  .map-wrapper {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
+
+  .about-single, .shop-info, .tamago-text {
+    text-align: center;
+    padding: 16px;
+  }
+
   .image-row {
     flex-direction: column;
     align-items: center;
@@ -367,91 +270,8 @@ footer a:hover {
   .image-row img {
     width: 90%;
   }
-
-  .edamame-text {
-    padding: 24px 16px;
-  }
 }
 
-@media screen and (max-width: 768px) {
-  ナビゲーション縦並び
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 0;
-  }
-
-  ヒーローテキスト中央寄せ調整
-  .hero-text {
-    top: 60%;
-    width: 90%;
-    font-size: 16px;
-    padding: 16px;
-  }
-
-  商品カード縦並び
-  .product-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  商品グリッドの余白調整
-  .product-grid {
-    flex-direction: column;
-    padding: 0 16px;
-  }
-
-  ロゴ画像サイズ調整
-  .logo-img {
-    height: 80px;
-  }
-
-  コンテナの左右パディング縮小
-  .container {
-    padding: 16px;
-  }
-
-  SNSリンク縦並び
-  .sns-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  ボタン中央揃え
-  .btn-primary {
-    display: block;
-    width: fit-content;
-    margin: 16px auto;
-    text-align: center;
-  }
-
-  地図レスポンシブ対応
-  .map-wrapper {
-    width: 100%;
-    padding: 0 16px;
-  }
-
-  見出しサイズ調整
-  h1 { font-size: 24px; }
-  h2 { font-size: 20px; }
-  h3 { font-size: 18px; }
-  h4 { font-size: 16px; }
-
-  テキスト全体中央寄せ（about など）
-  .about-single, .shop-info, .tamago-text {
-    text-align: center;
-    padding: 16px;
-  }
-}
-
-ハンバーガー初期非表示（PC時）
 .hamburger {
   display: none;
   flex-direction: column;
@@ -460,60 +280,56 @@ footer a:hover {
   height: 20px;
   cursor: pointer;
   z-index: 999;
-
-  span {
-    display: block;
-    height: 3px;
-    background: $text-color;
-    border-radius: 2px;
-  }
 }
 
-モバイル表示時のメニューとハンバーガー制御
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #303030;
+  border-radius: 2px;
+}
+
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
     position: absolute;
     top: 16px;
     right: 24px;
-}
+  }
 
   .nav-menu {
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
-    background: $base-color;
+    background: #FFFFFF;
     display: none;
     flex-direction: column;
     align-items: center;
     gap: 16px;
     padding: 16px 0;
-
-    &.open {
-      display: flex;
-    }
-
-    li {
-      list-style: none;
-    }
-
-    a {
-      font-size: 18px;
-      color: $text-color;
-    }
   }
 
-  .logo-container {
-    margin-left: 16px;
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu li {
+    list-style: none;
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+    color: #303030;
   }
 }
+
 .product-card h3 a {
-  color: #303030;                /* 黒に近いテキスト色 */
-  text-decoration: underline;    /* 下線を付ける */
+  color: #303030;
+  text-decoration: underline;
   transition: color 0.3s;
 }
 
 .product-card h3 a:hover {
-  color: #B48736;                /* ホバー時はゴールド系 */
+  color: #B48736;
 }
