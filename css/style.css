@@ -252,7 +252,9 @@ section:target::before {
 }
 
 /* --- レスポンシブ対応 --- */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
+
+  /* 商品ページ画像をスマホでリサイズ */
   .kuroedamame-image-row img,
   .tamago-image-row img,
   .asparagus-image-row img {
@@ -262,28 +264,59 @@ section:target::before {
   }
   .kuroedamame-image-row,
   .tamago-image-row,
-  .asparagus-image-row { gap: 12px; }
+  .asparagus-image-row {
+    gap: 12px;
+  }
   .product-detail-images img {
     width: 100%;
     height: auto;
     max-width: 320px;
   }
-  .product-detail-images { gap: 12px; }
-}
+  .product-detail-images {
+    gap: 12px;
+  }
 
-@media screen and (max-width: 768px) {
+  /* ナビ・ハンバーガーメニュー */
   .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #FFFFFF;
+    display: none;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     padding: 16px 0;
+    z-index: 200;
   }
+  .nav-menu.open {
+    display: flex;
+  }
+  .nav-menu li {
+    list-style: none;
+  }
+  .nav-menu a {
+    font-size: 18px;
+    color: #303030;
+  }
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    z-index: 300;
+  }
+
+  /* ヒーローテキストのサイズ・位置 */
   .hero-text {
     top: 60%;
     width: 90%;
     font-size: 16px;
     padding: 16px;
   }
+
+  /* 商品カード・グリッド調整 */
   .product-card {
     flex: 1 1 100%;
     max-width: 100%;
@@ -296,60 +329,54 @@ section:target::before {
     flex-direction: column;
     padding: 0 16px;
   }
-  .logo-img { height: 80px; }
-  .container { padding: 16px; }
+
+  /* ロゴ、コンテナ、SNSアイコンなど */
+  .logo-img {
+    height: 80px;
+  }
+  .container {
+    padding: 16px;
+  }
   .sns-icons {
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
+
+  /* ボタン調整 */
   .btn-primary {
     display: block;
     width: fit-content;
     margin: 16px auto;
     text-align: center;
   }
+
+  /* 地図まわり */
   .map-wrapper {
     width: 100%;
     max-width: 900px;
     margin: 0 auto 32px auto;
     padding: 0 16px;
   }
+
+  /* テキストやタイトルサイズ */
   h1 { font-size: 24px; }
   h2 { font-size: 20px; }
   h3 { font-size: 18px; }
   h4 { font-size: 16px; }
+
+  /* about、shop-info等中央揃え */
   .about-single, .shop-info, .tamago-text {
     text-align: center !important;
     padding: 16px;
   }
+
+  /* 画像を縦並びに */
   .image-row {
     flex-direction: column;
     align-items: center;
   }
-  .image-row img { width: 90%; }
-  .hamburger {
-    display: flex;
-    position: absolute;
-    top: 16px;
-    right: 24px;
-  }
-  .nav-menu {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background: #FFFFFF;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 16px 0;
-  }
-  .nav-menu.open { display: flex; }
-  .nav-menu li { list-style: none; }
-  .nav-menu a {
-    font-size: 18px;
-    color: #303030;
+  .image-row img {
+    width: 90%;
   }
 }
